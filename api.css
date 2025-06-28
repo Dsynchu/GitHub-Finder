@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 30px;
+}
+
+#usernameInput {
+  padding: 8px;
+  font-size: 16px;
+}
+
+#searchBtn {
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.user-card {
+  display: inline-block;
+  text-align: left;
+  margin-top: 20px;
+  border: 1px solid #ddd; 
+  padding: 16px;
+  width: 300px;
+  border-radius: 8px;
+}
+
+/* Skeleton styles */
+.skeleton {
+  background: #e2e2e2;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+.skeleton.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.skeleton.text {
+  height: 16px;
+  width: 80%;
+  margin: 8px auto;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
