@@ -23,7 +23,7 @@ async function getUser(username) {
    
   
   resultDiv.innerHTML = `
-    <div class="user-card">
+    <div class="user-card ">
       <div class="skeleton avatar"></div>
       <div class="skeleton text"></div>
       <div class="skeleton text"></div>
@@ -47,17 +47,19 @@ async function getUser(username) {
 
     // Display user info
     resultDiv.innerHTML = `
-      <img src="${data.avatar_url}" alt="Avatar" width="100">
+      <div class="border-2 rounded  rounded-xl  absolute p-4 mt-4 left-156 text-center flex flex-col item-center justify-center">
+      <img class="ml-15 mb-4" src="${data.avatar_url}" alt="Avatar" width="100">
 
-      <h2>${data.name || "No Name Provided"}</h2>
+      <h2 class="text-xl mt-4 mb-2 text-gray-400">${data.name || "No Name Provided"}</h2>
 
-      <p><strong>Username:</strong> ${data.login}</p>
+      <p class="text-emerald-500 "><strong class="text-white">Username:</strong>  ${data.login}</p>
 
-      <p><strong>Public Repos:</strong> ${data.public_repos}</p>
+      <p class="mt-1"><strong>Public Repos:</strong> ${data.public_repos}</p>
 
-      <p><strong>Followers:</strong> ${data.followers}</p>
+      <p class="mt-1"><strong>Followers:</strong> ${data.followers}</p>
 
-      <a href="${data.html_url}" target="_blank">View Profile</a>
+      <a class="text-blue-500 mt-1 border-b-1 w-[90px] ml-16" href="${data.html_url}" target="_blank">View Profile</a>
+      </div>
       
     `;
   } catch (error) {
